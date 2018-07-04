@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/mainScreenBackground"
     tools:context="com.google.firebase.udacity.friendlychat.MainActivity">
 
     <ListView
@@ -17,8 +18,11 @@
         android:layout_above="@+id/linearLayout"
         android:stackFromBottom="true"
         android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
         android:transcriptMode="alwaysScroll"
-        tools:listitem="@layout/item_message"/>
+        tools:listitem="@layout/item_message"
+
+        />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -27,19 +31,25 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/message_background"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/photoPickerButton"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:background="@android:drawable/ic_menu_gallery" />
+            android:background="@android:drawable/ic_menu_gallery"
+            android:layout_marginTop="8dp"
+            />
 
         <EditText
             android:id="@+id/messageEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:hint="Type a message"
+            android:background="@drawable/typing_message_background"
             android:layout_weight="1" />
 
         <Button
